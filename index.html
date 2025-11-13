@@ -147,7 +147,7 @@
       .sbb:hover,
       #add:hover,
       #plus:hover {
-      background-color: purple;
+      background-color: #9dad6f;
       cursor: pointer;
       }
       #maincontainer {
@@ -388,6 +388,7 @@ margin:auto;
    <script>
 	document.getElementById("wi").onclick=function(){onWin();};
 	let playable = [];
+	let starttime;
 	let tms = "";
         let secret = [];
 	let won = false;
@@ -602,6 +603,7 @@ console.log("Total Remaining Options: "+playable.length);
                   $(itemm).removeClass("disabled");
             }
 		playable=[];
+		let starttime = getTime();
 		pl(true);
 		secret = [];
 		won=false;
@@ -639,8 +641,9 @@ console.log("Total Remaining Options: "+playable.length);
             }
             var lab = "Number of Moves: ";
 		var vval = $(".res").length;
+		let elapsed = getTime()-starttime;
 		inste(lab,vval,$("#wpc"));
-		inste("Time taken: ", "hasn't been coded, so lets just say 2m 34s",$("#wpc"));
+		inste("Time taken: ", elapsed,$("#wpc"));
 
 }
 function inste(lab,valu,loca) {
@@ -715,4 +718,5 @@ return f;
 	addColor();
    </script>
 </body></html>
+
 
