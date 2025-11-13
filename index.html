@@ -603,7 +603,8 @@ console.log("Total Remaining Options: "+playable.length);
                   $(itemm).removeClass("disabled");
             }
 		playable=[];
-		let starttime = getTime();
+		let d = new Date();
+		let starttime = d.getTime();
 		pl(true);
 		secret = [];
 		won=false;
@@ -641,7 +642,8 @@ console.log("Total Remaining Options: "+playable.length);
             }
             var lab = "Number of Moves: ";
 		var vval = $(".res").length;
-		let elapsed = getTime()-starttime;
+		let d = new Date();
+		let elapsed = d.getTime()-starttime;
 		inste(lab,vval,$("#wpc"));
 		inste("Time taken: ", elapsed,$("#wpc"));
 
@@ -718,6 +720,7 @@ return f;
 	addColor();
    </script>
 </body></html>
+
 
 
 
