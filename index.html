@@ -644,10 +644,10 @@ console.log("Total Remaining Options: "+playable.length);
 		var vval = $(".res").length;
 		let d = new Date();
 		let elapsed = d.getTime()-starttime;
-		console.log(elapsed);
-		console.log(starttime);
+		let seconds = (elapsed/1000)%60;
+		let minutes = (elapsed/60000);
 		inste(lab,vval,$("#wpc"));
-		inste("Time taken: ", elapsed,$("#wpc"));
+		inste("Time taken: ", ""+minutes+"m" + seconds + "s",$("#wpc"));
 
 }
 function inste(lab,valu,loca) {
@@ -722,6 +722,7 @@ return f;
 	addColor();
    </script>
 </body></html>
+
 
 
 
