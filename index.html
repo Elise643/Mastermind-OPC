@@ -644,8 +644,8 @@ console.log("Total Remaining Options: "+playable.length);
 		var vval = $(".res").length;
 		let d = new Date();
 		let elapsed = d.getTime()-starttime;
-		let seconds = (elapsed/1000)%60;
-		let minutes = (elapsed/60000);
+		let seconds = Math.floor((elapsed/1000)%60);
+		let minutes = Math.floor(elapsed/60000);
 		inste(lab,vval,$("#wpc"));
 		inste("Time taken: ", ""+minutes+"m" + seconds + "s",$("#wpc"));
 
@@ -722,6 +722,7 @@ return f;
 	addColor();
    </script>
 </body></html>
+
 
 
 
